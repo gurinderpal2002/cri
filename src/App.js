@@ -12,7 +12,7 @@ const App = () => {
 
     return (
         <div className="main">
-            <div className="header">
+            <div className="container-1">
                 <img alt="logo" src={Logo} />
             </div>
 

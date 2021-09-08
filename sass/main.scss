@@ -10,6 +10,11 @@
 @mixin respond($breakpoint) {
 
 
+    @if $breakpoint == vvv-small-phone {
+        @media only screen and (max-width: 15.625em) { @content };    //300px
+    }
+
+
     @if $breakpoint == vv-small-phone {
         @media only screen and (max-width: 18.75em) { @content };    //300px
     }
@@ -68,6 +73,13 @@ html{
     @include respond(vv-small-phone){
         font-size: 25%;
     }
+
+     
+    @include respond(vv-small-phone){
+        font-size: 18.75%;
+    }
+
+    
     
     @include respond(big-desktop) {
         font-size: 75%;
@@ -92,63 +104,70 @@ body{
 .u-center-text { text-align: center !important; }
 
 
-.container-7{
-    font-weight: 700;
-}
-
-
-
 .main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     
-    & > *{
+    & > * {
         margin-bottom: 3.5rem;
     }
 
-    
-    .header{
-        width: 30vw;
-        height: 23vh;
-
-        img{
-            height: 100%;
-            width: 100%;
-        }
-
-
-
-        @include respond(tab-port){
-            height: 20vh;
-            width: 43vw;
-        }
-
-
-        @include respond(phone){
-            height: 20vh;
-            width: 50vw;
-        }
-
-
-        @include respond(small-phone){
-            height: 15vh;
-            width: 55vw;
-        }
-
-
-        @include respond(v-small-phone){
-            height: 15vh;
-            width: 60vw;
-        }
-
-        @include respond(vv-small-phone){
-            height: 10vh;
-            width: 70vw;
-        }
-
+    & > :last-child{
+        margin-bottom: 0rem;
     }
+
+
+   
+}
+
+
+ 
+.container-1{
+
+    width: 30vw;
+    height: 23vh;
+
+    img{
+        height: 100%;
+        width: 100%;
+    }
+
+
+    
+    @include respond(tab-land) {
+        width: 40vw;
+    }
+
+    @include respond(tab-port){
+        height: 18vh;
+        width: 43vw;
+    }
+
+
+    @include respond(phone){
+        
+        width: 50vw;
+    }
+
+
+    @include respond(small-phone){
+        
+        width: 55vw;
+    }
+
+
+    @include respond(v-small-phone){
+        width: 60vw;
+    }
+
+
+    @include respond(vv-small-phone){
+        width: 70vw;
+    }
+
+
 }
 
 
@@ -170,6 +189,7 @@ body{
 
 
     &--2{
+
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -212,20 +232,24 @@ body{
 
 .container-4{
     width: 80%;
-    margin-bottom: 2rem;
     
-
     img{
         width: 100%;
         height: 100%;
     }
 }
 
+
 .red-border{
     border-top: 2px solid #EC3237;
     width: 100%;
 }
 
+
+
+.container-7{
+    font-weight: 700;
+}
 
 
 .features{
@@ -248,29 +272,23 @@ body{
 }
 
 
-
-
 .footer{
     background-color: #EC3237;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     color: #FFF8AA;
-    margin-bottom: 0rem;
     flex-wrap: wrap;
 
     align-items: center;
     height: 20vh;
-    // position: relative;
 
 
-    @include respond(phone) { // width < 1200?
+    @include respond(phone) {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 30vh;
-        
-
 
         & > * {
             margin-bottom: 5rem;
@@ -285,14 +303,37 @@ body{
 
 
     @include respond(v-small-phone){
+
+        height: 45vh;
         & > * {
-            margin-bottom: 8rem;
+            margin-bottom: 6rem;
         }
 
         & > :last-child{
             margin-bottom: 0rem;
         }
     }
+
+
+    
+    @include respond(vv-small-phone){
+
+        & > * {
+            margin-bottom: 10rem;
+        }
+
+        & > :last-child{
+            margin-bottom: 0rem;
+        }
+    }
+
+
+    @include respond(vvv-small-phone){
+        height: 50vh;
+    }
+
+
+
 
 
     &-1{
@@ -305,11 +346,9 @@ body{
             position: absolute;
             left: 0%;
             top: -130%;
-
-         
-                border-radius: 50%;
-                height: 4rem;
-                width: 4rem;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
 
 
                 
@@ -327,13 +366,16 @@ body{
             }
 
             @include respond(vv-small-phone){
-                left: -20%;
+                left: -25%;
             }
 
-           
+             
+            @include respond(vvv-small-phone){
+                left: -30%;
+            }
 
-            
-    
+                
+
     
         }
 
@@ -342,7 +384,11 @@ body{
             font-size: 1.5rem;
 
             @include respond(phone){
-                font-size: 10px
+                font-size: 10px;
+            }
+
+            @include respond(vvv-small-phone){
+                font-size: 8px;
             }
 
             
@@ -384,7 +430,11 @@ body{
             }
 
             @include respond(vv-small-phone){
-                left: -20%;
+                left: -25%;
+            }
+
+            @include respond(vvv-small-phone){
+                left: -30%;
             }
     
 
@@ -396,6 +446,11 @@ body{
             @include respond(phone){
                 font-size: 10px
             }
+
+            
+            @include respond(vvv-small-phone){
+                font-size: 8px;
+            }
         }
 
     }
@@ -403,29 +458,3 @@ body{
 
 }
 
-
-
-// .fig-1{
-//     position: relative;
-// }
-
-
-// .footer-item{
-//     position: absolute;
-//     left: 50%;
-//     top: 50%;
-//     color:#FFF8AA;
-//     z-index: 5;
-// }
-
-
-
-
-
-.fig-2{
-    background-color: #FFF8AA;
-}
-
-.fig-3{
-    background-color: #FFF8AA;
-}

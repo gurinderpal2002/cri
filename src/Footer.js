@@ -5,11 +5,6 @@ import Contact from './Contact';
 
 const svg1 =  <svg xmlns="http://www.w3.org/2000/svg" fill="#FFF8AA" viewBox="0 0 24 24"  width="45" height="45">    <path d="M12,2C6.477,2,2,6.477,2,12c0,5.395,4.275,9.78,9.621,9.981v-6.942H9.278v-2.725h2.343v-2.005 c0-2.324,1.421-3.591,3.495-3.591c0.699-0.002,1.397,0.034,2.092,0.105v2.43h-1.428c-1.13,0-1.35,0.534-1.35,1.322v1.735h2.7 l-0.351,2.725h-2.365v6.659C18.768,20.613,22,16.689,22,12C22,6.477,17.523,2,12,2z"/></svg>;
 
-
-// const svg2 = <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="#EC3237" viewBox="1 -6 15 30" width="20px" height="20px">
-// <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-// </svg>;
-
 const svg2 =  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="30" height="30" fill="#EC3237" viewBox="7 -12 1 45" >
 <title>phone</title>
 <path d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z"/>
@@ -30,14 +25,14 @@ const Footer = () => {
 
             <Contact icon={svg1} text={<>www.facebook.com/cripumps</>} fill={"1"} />
 
-            <Contact icon={svg3} text={<>www.cripumps.com</>} fill={"2"} />
+            <Contact icon={svg3} text={<>www.crigroups.com</>} fill={"2"} />
 
         </div>
 
     );
         
-           
 
+        
 
 }
 

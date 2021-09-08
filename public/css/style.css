@@ -25,6 +25,9 @@ html {
   @media only screen and (max-width: 18.75em) {
     html {
       font-size: 25%; } }
+  @media only screen and (max-width: 18.75em) {
+    html {
+      font-size: 18.75%; } }
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -41,9 +44,6 @@ body {
 .u-center-text {
   text-align: center !important; }
 
-.container-7 {
-  font-weight: 700; }
-
 .main {
   display: flex;
   flex-direction: column;
@@ -51,32 +51,34 @@ body {
   align-items: center; }
   .main > * {
     margin-bottom: 3.5rem; }
-  .main .header {
-    width: 30vw;
-    height: 23vh; }
-    .main .header img {
-      height: 100%;
-      width: 100%; }
-    @media only screen and (max-width: 56.25em) {
-      .main .header {
-        height: 20vh;
-        width: 43vw; } }
-    @media only screen and (max-width: 37.5em) {
-      .main .header {
-        height: 20vh;
-        width: 50vw; } }
-    @media only screen and (max-width: 28.125em) {
-      .main .header {
-        height: 15vh;
-        width: 55vw; } }
-    @media only screen and (max-width: 21.875em) {
-      .main .header {
-        height: 15vh;
-        width: 60vw; } }
-    @media only screen and (max-width: 18.75em) {
-      .main .header {
-        height: 10vh;
-        width: 70vw; } }
+  .main > :last-child {
+    margin-bottom: 0rem; }
+
+.container-1 {
+  width: 30vw;
+  height: 23vh; }
+  .container-1 img {
+    height: 100%;
+    width: 100%; }
+  @media only screen and (max-width: 75em) {
+    .container-1 {
+      width: 40vw; } }
+  @media only screen and (max-width: 56.25em) {
+    .container-1 {
+      height: 18vh;
+      width: 43vw; } }
+  @media only screen and (max-width: 37.5em) {
+    .container-1 {
+      width: 50vw; } }
+  @media only screen and (max-width: 28.125em) {
+    .container-1 {
+      width: 55vw; } }
+  @media only screen and (max-width: 21.875em) {
+    .container-1 {
+      width: 60vw; } }
+  @media only screen and (max-width: 18.75em) {
+    .container-1 {
+      width: 70vw; } }
 
 .container-2 {
   display: flex;
@@ -105,8 +107,7 @@ body {
         width: 100%; }
 
 .container-4 {
-  width: 80%;
-  margin-bottom: 2rem; }
+  width: 80%; }
   .container-4 img {
     width: 100%;
     height: 100%; }
@@ -114,6 +115,9 @@ body {
 .red-border {
   border-top: 2px solid #EC3237;
   width: 100%; }
+
+.container-7 {
+  font-weight: 700; }
 
 .features {
   display: flex;
@@ -130,9 +134,8 @@ body {
   background-color: #EC3237;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   color: #FFF8AA;
-  margin-bottom: 0rem;
   flex-wrap: wrap;
   align-items: center;
   height: 20vh; }
@@ -147,10 +150,20 @@ body {
       .footer > :last-child {
         margin-bottom: 0rem; } }
   @media only screen and (max-width: 21.875em) {
+    .footer {
+      height: 45vh; }
+      .footer > * {
+        margin-bottom: 6rem; }
+      .footer > :last-child {
+        margin-bottom: 0rem; } }
+  @media only screen and (max-width: 18.75em) {
     .footer > * {
-      margin-bottom: 8rem; }
+      margin-bottom: 10rem; }
     .footer > :last-child {
       margin-bottom: 0rem; } }
+  @media only screen and (max-width: 15.625em) {
+    .footer {
+      height: 50vh; } }
   .footer-1 {
     position: relative;
     padding-left: 5rem; }
@@ -159,8 +172,8 @@ body {
       left: 0%;
       top: -130%;
       border-radius: 50%;
-      height: 4rem;
-      width: 4rem; }
+      height: 40px;
+      width: 40px; }
       @media only screen and (max-width: 56.25em) {
         .footer-1-fig {
           left: -5%; } }
@@ -172,12 +185,18 @@ body {
           left: -15%; } }
       @media only screen and (max-width: 18.75em) {
         .footer-1-fig {
-          left: -20%; } }
+          left: -25%; } }
+      @media only screen and (max-width: 15.625em) {
+        .footer-1-fig {
+          left: -30%; } }
     .footer-1 h3 {
       font-size: 1.5rem; }
       @media only screen and (max-width: 37.5em) {
         .footer-1 h3 {
           font-size: 10px; } }
+      @media only screen and (max-width: 15.625em) {
+        .footer-1 h3 {
+          font-size: 8px; } }
   .footer-2 {
     position: relative;
     padding-left: 5rem; }
@@ -200,15 +219,15 @@ body {
           left: -15%; } }
       @media only screen and (max-width: 18.75em) {
         .footer-2-fig {
-          left: -20%; } }
+          left: -25%; } }
+      @media only screen and (max-width: 15.625em) {
+        .footer-2-fig {
+          left: -30%; } }
     .footer-2 h3 {
       font-size: 1.5rem; }
       @media only screen and (max-width: 37.5em) {
         .footer-2 h3 {
           font-size: 10px; } }
-
-.fig-2 {
-  background-color: #FFF8AA; }
-
-.fig-3 {
-  background-color: #FFF8AA; }
+      @media only screen and (max-width: 15.625em) {
+        .footer-2 h3 {
+          font-size: 8px; } }
