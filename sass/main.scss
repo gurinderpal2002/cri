@@ -137,13 +137,14 @@ body{
 
     
     @include respond(tab-land) {
+        height: 18vh;
         width: 40vw;
     }
 
-    @include respond(tab-port){
-        height: 18vh;
+    @include respond(tab-port){   
         width: 43vw;
     }
+
 
 
     @include respond(phone){
