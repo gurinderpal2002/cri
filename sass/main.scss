@@ -11,7 +11,7 @@
 
 
     @if $breakpoint == vvv-small-phone {
-        @media only screen and (max-width: 15.625em) { @content };    //300px
+        @media only screen and (max-width: 15.625em) { @content };    //250px
     }
 
 
@@ -126,8 +126,8 @@ body{
  
 .container-1{
 
-    width: 30vw;
-    height: 23vh;
+    width: 40rem;
+    height: 15rem;
 
     img{
         height: 100%;
@@ -135,42 +135,42 @@ body{
     }
 
 
+
     
-    @include respond(tab-land) {
-        height: 28vh;
-        width: 40vw;
-    }
+    // @include respond(tab-land) {
+    //     width: 45rem;
+    // }
 
 
-    @include respond(tab-port){   
-        width: 43vw;
-    }
+    // @include respond(tab-port){   
+    //     width: 47rem;
+    // }
 
 
-
-    @include respond(phone){
+    // @include respond(phone){
         
-        width: 50vw;
-    }
+    //     width: 50rem;
+    // }
 
 
-    @include respond(small-phone){
-        
-        width: 55vw;
-    }
+    // @include respond(small-phone){       
+    //     width: 55rem;
+    //     height: 17vh;
+    // }
 
 
-    @include respond(v-small-phone){
-        width: 60vw;
-    }
+    // @include respond(v-small-phone){
+    //     width: 57rem;
+    // }
 
 
-    @include respond(vv-small-phone){
-        width: 70vw;
-    }
+    // @include respond(vv-small-phone){
+    //     width: 60rem;
+    // }
 
 
 }
+
 
 
 .container-2{
@@ -283,14 +283,14 @@ body{
     flex-wrap: wrap;
 
     align-items: center;
-    height: 20vh;
+    height: 15rem;
 
 
-    @include respond(phone) {
+    @media only screen and (max-width: 39.375em){
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 30vh;
+        height: 25rem;
 
         & > * {
             margin-bottom: 5rem;
@@ -306,19 +306,13 @@ body{
 
     @include respond(v-small-phone){
 
-        height: 45vh;
-        & > * {
-            margin-bottom: 6rem;
-        }
-
-        & > :last-child{
-            margin-bottom: 0rem;
-        }
+        height: 30rem;
     }
-
 
     
     @include respond(vv-small-phone){
+
+        height: 50rem;
 
         & > * {
             margin-bottom: 10rem;
@@ -329,10 +323,22 @@ body{
         }
     }
 
+    
+    // @include respond(vv-small-phone){
 
-    @include respond(vvv-small-phone){
-        height: 50vh;
-    }
+    //     & > * {
+    //         margin-bottom: 10rem;
+    //     }
+
+    //     & > :last-child{
+    //         margin-bottom: 0rem;
+    //     }
+    // }
+
+
+    // @include respond(vvv-small-phone){
+    //     height: 50vh;
+    // }
 
 
 
