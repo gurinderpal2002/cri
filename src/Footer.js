@@ -36,19 +36,6 @@ const Footer = () => {
 
     );
         
-
-           {/* <figure>
-                
-            
-            </figure> */}
-
-        {/* <figure className="fig-2">
-           
-        </figure>
-
-        <figure className="fig-3">
-           
-        </figure> */}
            
 
 

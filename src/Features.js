@@ -5,11 +5,11 @@ const Features = ({features}) => {
    
     const featuresArray = () => {
     
-        return features.map(feature => {
+        return features.map((feature,index) => {
 
 
             return (
-                     <span className="feature-item">{feature}</span>
+                     <span key={index} className="feature-item">{feature}</span>
                
                 ); 
         });
